@@ -1,0 +1,181 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #15151e;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021BritishManualAdds/GettyImages-1234111850.jpg.transform/9col/image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(225, 6, 0, 0.3) 0%, rgba(21, 21, 30, 0.8) 100%);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .errorBox {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 8rem;
+    font-weight: 900;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 4px 4px 0 #e10600, 
+                 8px 8px 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: -5px;
+    transform: skew(-5deg);
+  }
+  
+  .redFlag {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    right: -20px;
+    height: 10px;
+    background-color: #e10600;
+    transform: translateY(-50%) rotate(-2deg);
+    z-index: -1;
+  }
+  
+  .subtitle {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 1rem 0 2rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .animateFlag {
+    animation: waveFlag 1s infinite ease-in-out;
+    display: inline-block;
+    font-size: 1.8rem;
+  }
+  
+  @keyframes waveFlag {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .messageBox {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #e10600;
+    padding: 1rem 2rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0;
+    width: 100%;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+  }
+  
+  .linkWrapper {
+    text-decoration: none;
+  }
+  
+  .button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #e10600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:hover {
+    background-color: #b80500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .buttonIcon {
+    font-size: 1.4rem;
+  }
+  
+  .quoteContainer {
+    margin-top: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 600px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+  }
+  
+  .infoText {
+    font-style: italic;
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .attribution {
+    font-weight: bold;
+    color: #e10600;
+    margin: 0.5rem 0 0;
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 6rem;
+    }
+    
+    .subtitle {
+      font-size: 1.8rem;
+    }
+  }
