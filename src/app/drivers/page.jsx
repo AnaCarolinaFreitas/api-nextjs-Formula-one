@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import Header from '@/components/Header';
 
 export default function Page() {
   const [pilotos, setPilotos] = useState([]);
@@ -24,13 +25,15 @@ export default function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-50 p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">Pilotos</h1>
+    <>
+      <Header />
+      <div className="min-h-screen bg-[#020206] p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl font-bold text-center mb-8 text-white">Pilotos</h1>
 
         <div className="text-center mb-8">
           <div className="mb-6">
-            <button onClick={buscarPilotos} disable={loading} className="bg-blue-400 text-white px-8 py-3 rounded-lg hover:bg-blue-500 disabled:bg-gray-400 font-semibold">
+            <button onClick={buscarPilotos} disable={loading} className="bg-[#CE227A] text-white px-8 py-3 rounded-lg hover:bg-[#A61D5D] disabled:bg-gray-400 font-semibold">
               {loading? "Carregando..." : "🔍 Buscar Pilotos"}
             </button>
         </div>
@@ -48,5 +51,6 @@ export default function Page() {
       ))}
     </div>
     </div>
+    </>
   )
 }

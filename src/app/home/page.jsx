@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div className="min-h-screen p-2 flex flex-col items-center justify-center bg-[#020206]">
         <div className="max-w-3xl p-8 bg-white rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-100">
             <div>
                 <Image src="/images/AnaCarolinaFreitas.jpg" alt="Ana Carolina" width={200} height={200} className="mx-auto mb-4 rounded-full hover:shadow-lg" />

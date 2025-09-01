@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  background-color: #020206;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+}
