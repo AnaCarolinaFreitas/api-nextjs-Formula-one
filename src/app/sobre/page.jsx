@@ -6,8 +6,13 @@ export default function page() {
   return (
     <div className={styles.container}>
         <Header />
-      <h1 className={styles.title}>Sobre</h1>
-      <p className={styles.description}>Esta é a página sobre nós.</p>
+        <div className={styles.banner}>
+          <div className={styles.textSection}>
+            <h1 className={styles.title}>OpenF1 — Fórmula 1 em Tempo Real na Ponta do Seu Código!</h1>
+            <p className={styles.paragraph}> Dados históricos e ao vivo, entregues com velocidade e precisão — acelere seus projetos F1 agora mesmo!</p>
+        </div>
+        <div className={styles.line}></div>
+    </div>
     </div>
   )
 }

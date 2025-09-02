@@ -13,3 +13,18 @@
   font-size: 1rem;
   color: #666;
 }
+
+.banner{
+  display: flex;
+  height: 40rem;
+  overflow: hidden;
+  background-color: #161714;
+}
+
+.line {
+  width: 60%;
+  height: 8rem;
+  margin-top: 10rem;
+  transform: rotate(-60deg);
+  background: linear-gradient(50deg, #161714, #CE227A);
+}
