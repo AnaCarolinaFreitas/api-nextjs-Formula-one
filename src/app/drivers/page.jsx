@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-[#020206] p-8">
+      <div className="min-h-screen p-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-center mb-8 text-white">Pilotos</h1>
 

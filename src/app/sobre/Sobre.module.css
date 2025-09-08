@@ -3,28 +3,95 @@
   background-color: #020206;
 }
 
-.title {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  color: #333;
-}
-
-.description {
-  font-size: 1rem;
-  color: #666;
-}
-
 .banner{
+  position: relative;
   display: flex;
-  height: 40rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 5vw 3rem; /* reduz topo para subir conteúdo */
+  min-height: 70vh;
+  background: #000;
   overflow: hidden;
-  background-color: #161714;
+
 }
 
-.line {
-  width: 60%;
-  height: 8rem;
-  margin-top: 10rem;
-  transform: rotate(-60deg);
-  background: linear-gradient(50deg, #161714, #CE227A);
+/* Background de vídeo */
+.videoBg {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:0;
+}
+
+.videoBg::after { /* overlay escuro para contraste do texto */
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 25% 40%, rgba(0,0,0,.15), rgba(0,0,0,.75) 70%);
+  pointer-events:none;
+}
+
+.video {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.9) contrast(1.05) saturate(1.2);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  right: 12%;
+  width: 30%;
+  height: 100rem;
+  background: linear-gradient(50deg, #161714, #aa1663);
+  transform: rotate(30deg);
+  z-index: 1;
+  filter: brightness(1) contrast(1.05);
+}
+
+.textSection { 
+  position: relative; 
+  z-index:2; 
+  margin-top:-1rem;
+ }
+
+.title {
+  font-size: 3rem;
+  line-height:1.1;
+  font-weight:700;
+  margin:0 0 1.25rem;
+  letter-spacing:.5px;
+  color:#fff;
+  z-index: 2;
+}
+
+.paragraph {
+  font-size:1rem;
+  line-height:1.6;
+  color:#e2e2e2;
+  max-width:520px;
+  z-index: 2;
+}
+
+.carWrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1; /* acima do vídeo mas abaixo de elementos com z-index maior */
+  pointer-events: none;
+}
+
+.carImage {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  object-fit: contain;
+  transform: translateY(20px);
 }
