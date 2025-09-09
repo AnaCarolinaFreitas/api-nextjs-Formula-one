@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 4rem 5vw 3rem; /* reduz topo para subir conteúdo */
+  padding: 4rem 5vw 3rem;
   min-height: 70vh;
   background: #000;
   overflow: hidden;
@@ -47,7 +47,7 @@
   top: -25%;
   right: 12%;
   width: 30%;
-  height: 100rem;
+  height: 115rem;
   background: linear-gradient(50deg, #161714, #aa1663);
   transform: rotate(30deg);
   z-index: 1;
@@ -94,4 +94,54 @@
   max-width: 900px;
   object-fit: contain;
   transform: translateY(20px);
+}
+
+.content {
+  padding: 3rem 6rem;
+  border-color: #aa1663;
+  border-width: 2px;
+  border-style: solid;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.contentTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.contentTitle:hover {
+  color: #CE227A;
+}
+
+.span {
+  font-weight: bold;
+  color: #aa162f;
+}
+
+.code {
+  background-color: #1e1e1e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d4d4d4;
+  margin-bottom: 1rem;
+}
+
+.contentParagraph {
+  margin-bottom: 1rem;
+}
+
+.contentLink {
+  text-decoration: none;
+}
+
+.listTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.3rem;
+  margin-bottom: 0.7rem;
 }

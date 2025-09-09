@@ -4,6 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import Header from '@/components/Header';
+import styles from './Drivers.module.css';
 
 export default function Page() {
   const [pilotos, setPilotos] = useState([]);
@@ -27,6 +28,17 @@ export default function Page() {
   return (
     <>
       <Header />
+      <section className={styles.banner}>
+        <div className={styles.imagebg}>
+          <Image src={"/images/pilotosBg.png"} alt="Escrito Pilotos" className={styles.image} width={1920} height={1080} priority />
+        </div>
+        <div className={styles.linha}>
+          <div className={styles.linhaPontilhada}></div>
+        </div>
+        <div className={styles.car}>
+          <Image src={"/images/carro-visão-topo.png"} alt="Carro de Fórmula 1" className={styles.carImg} width={900} height={520} priority />
+        </div>
+      </section>
       <div className="min-h-screen p-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-center mb-8 text-white">Pilotos</h1>
