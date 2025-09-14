@@ -42,6 +42,8 @@ export default function page() {
         <h2 className={styles.contentTitle}>Endpoint escolhido para buscar os dados:</h2>
         <code className={styles.code}>/drivers</code>
 
+     <div className={styles.listContainer}>
+      <div className={styles.vertical}>
         <h3 className={styles.listTitle}>Atributos recebidos na resposta da API:</h3>
         <ul className={styles.list}>
           <li><strong>driver_number:</strong> O número único designado a cada piloto</li>
@@ -55,6 +57,9 @@ export default function page() {
           <li><strong>headshot_url:</strong> Foto do piloto</li>
           <li><strong>country_code</strong> Código do país</li>
         </ul>
+</div>
+        <Image src="/images/driver.png" alt="Piloto de macacão preto com detalhes rosa " className={styles.driverImage} width={800} height={400} priority />
+        </div>
       </section>
     </div>
   )

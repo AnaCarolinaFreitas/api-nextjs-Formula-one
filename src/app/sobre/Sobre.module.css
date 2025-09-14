@@ -139,9 +139,40 @@
   text-decoration: none;
 }
 
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(180deg, #020206, #1A1A37);
+  padding: 1rem;
+  border-width: 0.1rem;
+  margin-top: 2rem;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
 .listTitle {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1.3rem;
   margin-bottom: 0.7rem;
+}
+
+.driverImage {
+  height: 25rem;
+  width: 30rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1rem;
+}
+
+.driverImage:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
