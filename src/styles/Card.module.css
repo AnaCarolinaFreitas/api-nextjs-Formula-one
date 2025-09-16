@@ -1,0 +1,72 @@
+.card {
+    position: relative;
+    width: 350px; /* Ajuste o tamanho do card conforme necessário */
+    height: 400px; /* Ajuste a altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent; /* Fundo transparente para a imagem aparecer */
+}
+
+.driverImage {
+    position: absolute;
+    top: 50px; /* Posição vertical da imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    z-index: 1; /* Garante que a imagem fique sobre a faixa */
+}
+
+.driverNumber {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para melhorar a visibilidade */
+}
+
+.infoBand {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    /* Remova o background-color fixo aqui */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transform: skewX(-20deg);
+    transform-origin: left bottom;
+    z-index: 2;
+}
+.teamLogo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.driverName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    /* Para reverter a inclinação do texto */
+    transform: skewX(20deg);
+}
+
+.moreInfo {
+    position: absolute;
+    bottom: 20px;
+    z-index: 3; /* Para o link ficar em cima de tudo */
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

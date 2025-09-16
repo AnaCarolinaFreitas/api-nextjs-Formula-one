@@ -5,6 +5,7 @@ import axios from "axios";
 import Image from "next/image";
 import Header from "@/components/Header";
 import styles from "./Drivers.module.css";
+import DriversCard from "@/components/Card";
 
 export default function Page() {
   const [pilotos, setPilotos] = useState([]);
@@ -89,21 +90,10 @@ export default function Page() {
             </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {pilotos.map((piloto) => (
-            <div key={piloto.id} className="bg-white p-10 rounded-lg shadow-md">
-              <Image
-                src={piloto.headshot_url || "https://placehold.co/150"}
-                alt={piloto.full_name || "Piloto"}
-                width={150}
-                height={150}
-                className="mx-auto mb-4 rounded-full"
-              />
-              <h3 className="font-bold text-lg">{piloto.full_name}</h3>
-              <p className="text-gray-600">{piloto.driver_number}</p>
-              <p className="text-gray-600">{piloto.country_code}</p>
-            </div>
+   
+        <div className={styles.grid}>
+          {pilotos.map((piloto, index) => (
+            <DriversCard key={piloto.id || index} piloto={piloto} />
           ))}
         </div>
       </div>
